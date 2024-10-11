@@ -65,7 +65,7 @@ Este enfoque permite a los desarrolladores y usuarios entender rápidamente el i
 
 En este proyecto, utilizaremos un enfoque GitFlow simplificado para la gestión de ramas en este repositorio. Solo existirán dos ramas permanentes: **develop** y **main**. La rama **main** contendrá la versión estable del proyecto, mientras que **develop** se utilizará para integrar los cambios y desarrollos en curso. Para el desarrollo de nuevas funciones y proyectos, crearemos ramas de **feature**, que se basarán en **develop**. Una vez que se complete el desarrollo en estas ramas, se realizarán fusiones a **develop** para su revisión y pruebas, garantizando así un flujo de trabajo organizado y eficiente. Las ramas intermedias como **hotfix** y **release**, no serán usadas.
 
-## Convenciones de Nombres📜
+## Convenciones 📜
 
 Para mantener la claridad y la coherencia en nuestro proyecto de lenguaje C, adoptaremos las siguientes convenciones de nombres para diversos elementos: 
 
@@ -75,17 +75,33 @@ Para mantener la claridad y la coherencia en nuestro proyecto de lenguaje C, ado
     * **feature/usb/cdc**: Nueva rama creada para desarrollar un proyecto ejemplo de conectividad usb modo CDC
     * **feature/freertos/semaphores**: Nueva rama creada para desarrollar un proyecto ejemplo de FreeRTOS y manejo de semaforos
 
-2. **Nombres de carpetas** *snake_case*: Nombres en minúsculas y separados por guiones bajos (por ejemplo, `src`, `include`, `lib`).
+2. **commits**:  usar la convencion [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/)
 
-3. **Nombres de archivos** *snake_case*: Al igual que las carpetas, los nombres de los archivos serán en minúsculas y usarán guiones bajos para separar las palabras, con la extensión correspondiente, como `.c` para archivos de código y `.h` para archivos de encabezado (por ejemplo, `mi_archivo.c`, `mi_archivo.h`).
+    * **feat**: cuando se añade una nueva funcionalidad.
+    * **fix**: cuando se arregla un error.
+    * **chore**: tareas rutinarias que no sean específicas de una feature o un error como por ejemplo añadir contenido al fichero .gitignore o instalar una dependencia.
+    * **test**: si añadimos o arreglamos tests.
+    * **docs**: cuando solo se modifica documentación.
+    * **build**: cuando el cambio afecta al compilado del proyecto.
+    * **ci**: el cambio afecta a ficheros de configuración y scripts relacionados con la integración continua.
+    * **style**: cambios de legibilidad o formateo de código que no afecta a funcionalidad.
+    refactor: cambio de código que no corrige errores ni añade funcionalidad, pero mejora el código.
+    * **perf**: usado para mejoras de rendimiento.
+    * **revert**: si el commit revierte un commit anterior. Debería indicarse el hash del commit que se revierte.
 
-4. **Nombres de variables** *snake_case*: minúsculas y usarán guiones bajos para separar las palabras (por ejemplo, `numero_de_intentos`, `valor_maximo`).
 
-5. **Nombres de constantes** *k_snake_case*: iniciando con la letra k seguido de guiones bajos para separar las palabras (por ejemplo, `k_quectel_comando_at1`, `k_constante_pi`).
+3. **Nombres de carpetas** *snake_case*: Nombres en minúsculas y separados por guiones bajos (por ejemplo, `src`, `include`, `lib`).
 
-6. **Nombres de DEFINE** *UPPER_CASE_SNAKE_CASE*: Las macros se definirán en mayúsculas con palabras separadas por guiones bajos, facilitando su identificación (por ejemplo, `MAX_BUFFER_SIZE`, `ENABLE_FEATURE`).
+4. **Nombres de archivos** *snake_case*: Al igual que las carpetas, los nombres de los archivos serán en minúsculas y usarán guiones bajos para separar las palabras, con la extensión correspondiente, como `.c` para archivos de código y `.h` para archivos de encabezado (por ejemplo, `mi_archivo.c`, `mi_archivo.h`).
 
-7. **Nombres de funciones** *camelCase*: Comenzando con minúscula y capitalizando la primera letra de cada palabra subsiguiente (por ejemplo, `numeroDeIntentos`, `valorMaximo`).
+5. **Nombres de variables** *snake_case*: minúsculas y usarán guiones bajos para separar las palabras (por ejemplo, `numero_de_intentos`, `valor_maximo`).
+
+6. **Nombres de constantes** *k_snake_case*: iniciando con la letra k seguido de guiones bajos para separar las palabras (por ejemplo, `k_quectel_comando_at1`, `k_constante_pi`).
+
+7. **Nombres de DEFINE** *UPPER_CASE_SNAKE_CASE*: Las macros se definirán en mayúsculas con palabras separadas por guiones bajos, facilitando su identificación (por ejemplo, `MAX_BUFFER_SIZE`, `ENABLE_FEATURE`).
+
+8. **Nombres de funciones** *camelCase*: Comenzando con minúscula y capitalizando la primera letra de cada palabra subsiguiente (por ejemplo, `numeroDeIntentos`, `valorMaximo`).
+
 
 ## Estructura de Carpetas 📂
 
